@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Temperature Convertor</title>
+    <meta name="description" content="Temperature Convertor">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+
+    <style>
+body
+  {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 40px auto;
+    max-width: 660px;
+    background-color: #63D1F4;
+    line-height: 2;
+  }
+h1
+  {
+    font-size: 2em;
+    text-align: center;
+    padding: 10px;
+  }
+h2
+  {
+    text-align:center;
+    font-size:5em;
+    line-height:1;
+    color:#50A6C2;
+  }
+p
+  {
+    text-align: center;
+    font-size: 18px;
+    padding:10px
+  }
+input
+  {
+    min-height:50px;
+    font-size:25px;
+  }
+</style>
+    <script>
+  function f2c (tempIn) {
+    document.getElementById('cin').value = (tempIn-32)/1.8;
+  }
+
+  function c2f (tempIn) {
+    document.getElementById('fin').value = (tempIn*1.8)+32;
+  }
+</script>
+</head>
+<body>
+<h2>F°</h2>
+<p>
+    <input id="fin" type="number" placeholder="Fahrenheit" oninput="f2c(this.value)">
+    <input id="cin" type="number" placeholder="Celsius" oninput="c2f(this.value)">
+</p>
+<h2>C°</h2>
+</body>
+</html>
